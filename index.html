@@ -1,815 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Noor Hasan — Senior Operations & Strategy Leader</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor Hasan | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --navy:   #0f1e2e;
-    --navy2:  #1a2e4a;
-    --teal:   #0d7377;
-    --teal2:  #14a7ac;
-    --cream:  #f5f0e8;
-    --warm:   #ede8dc;
-    --text:   #1a1a2e;
-    --muted:  #6b7a8d;
-    --line:   rgba(13,115,119,0.2);
-    --gold:   #c9a84c;
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
 
-  html { scroll-behavior: smooth; }
+nav a {
+  color: #38bdf8;
+  margin-left: 15px;
+  text-decoration: none;
+}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
 
-  /* ── NOISE TEXTURE OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 1000; opacity: 0.4;
-  }
+.hero h1 {
+  font-size: 40px;
+}
 
-  /* ── SCROLLBAR ── */
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--warm); }
-  ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+.hero p {
+  color: #94a3b8;
+}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 4rem;
-    background: rgba(245,240,232,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-    transition: all 0.3s ease;
-  }
-  nav.scrolled {
-    padding: 0.8rem 4rem;
-    background: rgba(245,240,232,0.95);
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem; font-weight: 600;
-    color: var(--navy2); letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--muted);
-    text-decoration: none; transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--teal); }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    position: relative; overflow: hidden;
-  }
+/* SECTION */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
 
-  .hero-left {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 8rem 4rem 4rem 4rem;
-    position: relative; z-index: 2;
-  }
+h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
 
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.72rem;
-    color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-  .hero-tag::before {
-    content: ''; display: block;
-    width: 24px; height: 1px; background: var(--teal);
-  }
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
 
-  h1.hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
-    font-weight: 700; line-height: 1.0;
-    color: var(--navy2);
-    opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards;
-  }
-  h1.hero-name em {
-    font-style: italic; color: var(--teal); font-weight: 300;
-  }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-  .hero-title {
-    font-size: 1rem; font-weight: 400; color: var(--muted);
-    margin-top: 1rem; line-height: 1.6;
-    max-width: 420px;
-    opacity: 0; animation: fadeUp 0.8s ease 0.7s forwards;
-  }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-  .hero-stats {
-    display: flex; gap: 2.5rem; margin-top: 3rem;
-    opacity: 0; animation: fadeUp 0.8s ease 0.9s forwards;
-  }
-  .stat-item { display: flex; flex-direction: column; gap: 0.2rem; }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem; font-weight: 700; color: var(--navy2); line-height: 1;
-  }
-  .stat-num span { font-size: 1rem; color: var(--teal); }
-  .stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
-
-  .hero-cta {
-    display: flex; gap: 1rem; margin-top: 2.5rem;
-    opacity: 0; animation: fadeUp 0.8s ease 1.1s forwards;
-  }
-  .btn-primary {
-    padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    background: var(--navy2); color: var(--cream);
-    border: none; cursor: pointer; text-decoration: none;
-    transition: all 0.3s ease; position: relative; overflow: hidden;
-  }
-  .btn-primary::after {
-    content: ''; position: absolute; inset: 0;
-    background: var(--teal); transform: translateX(-101%);
-    transition: transform 0.3s ease;
-  }
-  .btn-primary:hover::after { transform: translateX(0); }
-  .btn-primary span { position: relative; z-index: 1; }
-  .btn-outline {
-    padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    background: transparent; color: var(--navy2);
-    border: 1.5px solid var(--navy2); cursor: pointer; text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .btn-outline:hover { background: var(--navy2); color: var(--cream); }
-
-  .hero-right {
-    position: relative; display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .hero-bg-block {
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, var(--navy2) 0%, #0d4a4d 100%);
-  }
-  .hero-pattern {
-    position: absolute; inset: 0; opacity: 0.06;
-    background-image: repeating-linear-gradient(
-      45deg, var(--cream) 0, var(--cream) 1px, transparent 0, transparent 50%
-    );
-    background-size: 20px 20px;
-  }
-  .hero-float-card {
-    position: relative; z-index: 2;
-    background: rgba(245,240,232,0.08);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(245,240,232,0.15);
-    padding: 2.5rem;
-    max-width: 320px; width: 90%;
-    opacity: 0; animation: fadeIn 1s ease 1.2s forwards;
-  }
-  .float-card-title {
-    font-family: 'DM Mono', monospace; font-size: 0.65rem;
-    color: var(--teal2); letter-spacing: 0.15em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-  .csuite-item {
-    display: flex; align-items: center; gap: 1rem;
-    padding: 0.8rem 0; border-bottom: 1px solid rgba(245,240,232,0.1);
-  }
-  .csuite-item:last-child { border-bottom: none; }
-  .csuite-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--teal2); flex-shrink: 0;
-  }
-  .csuite-text { color: var(--cream); font-size: 0.85rem; font-weight: 400; }
-  .csuite-co { color: rgba(245,240,232,0.5); font-size: 0.75rem; margin-top: 0.15rem; }
-
-  /* ── SECTIONS COMMON ── */
-  section { padding: 6rem 4rem; }
-  .section-tag {
-    font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase;
-    display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;
-  }
-  .section-tag::after { content: ''; flex: 1; height: 1px; background: var(--line); max-width: 60px; }
-  h2.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
-    color: var(--navy2); line-height: 1.1; margin-bottom: 0.5rem;
-  }
-  h2.section-title em { font-style: italic; color: var(--teal); }
-
-  /* ── ABOUT ── */
-  #about { background: var(--warm); }
-  .about-grid {
-    display: grid; grid-template-columns: 1.2fr 1fr;
-    gap: 5rem; align-items: start; margin-top: 3rem;
-  }
-  .about-text p {
-    font-size: 1rem; line-height: 1.85; color: #3a3a4a;
-    margin-bottom: 1.2rem; font-weight: 300;
-  }
-  .about-text p strong { font-weight: 600; color: var(--navy2); }
-  .about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-  .info-block { border-left: 2px solid var(--teal); padding-left: 1.2rem; }
-  .info-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
-  .info-value { font-size: 0.95rem; font-weight: 500; color: var(--navy2); }
-
-  /* ── ACHIEVEMENTS ── */
-  #achievements { background: var(--navy2); }
-  #achievements .section-tag { color: var(--teal2); }
-  #achievements .section-tag::after { background: rgba(255,255,255,0.1); }
-  #achievements h2.section-title { color: var(--cream); }
-  #achievements h2.section-title em { color: var(--teal2); }
-
-  .achievements-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; margin-top: 3rem;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-  .ach-card {
-    background: var(--navy2); padding: 2rem 1.5rem;
-    transition: background 0.3s ease;
-    cursor: default;
-  }
-  .ach-card:hover { background: rgba(13,115,119,0.25); }
-  .ach-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem; font-weight: 700;
-    color: var(--teal2); line-height: 1; margin-bottom: 0.5rem;
-  }
-  .ach-num sup { font-size: 1.2rem; }
-  .ach-desc { font-size: 0.82rem; color: rgba(245,240,232,0.7); line-height: 1.5; }
-  .ach-org { font-size: 0.7rem; color: var(--teal2); margin-top: 0.5rem; letter-spacing: 0.05em; }
-
-  /* ── EXPERIENCE ── */
-  #experience { background: var(--cream); }
-  .exp-timeline { margin-top: 3rem; position: relative; }
-  .exp-timeline::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 1px; background: var(--line);
-  }
-  .exp-item {
-    padding: 0 0 3rem 2.5rem; position: relative;
-    opacity: 0; transform: translateX(-20px);
-    transition: all 0.6s ease;
-  }
-  .exp-item.visible { opacity: 1; transform: translateX(0); }
-  .exp-item::before {
-    content: ''; position: absolute; left: -4px; top: 6px;
-    width: 9px; height: 9px; border-radius: 50%;
-    background: var(--cream); border: 2px solid var(--teal);
-  }
-  .exp-item:first-child::before { background: var(--teal); }
-  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.3rem; }
-  .exp-role { font-size: 1.05rem; font-weight: 600; color: var(--navy2); }
-  .exp-period {
-    font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    color: var(--muted); white-space: nowrap;
-  }
-  .exp-company { font-size: 0.85rem; color: var(--teal); font-weight: 500; margin-bottom: 1rem; }
-  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-  .exp-bullets li {
-    font-size: 0.88rem; color: #4a4a5a; line-height: 1.6;
-    padding-left: 1.2rem; position: relative;
-  }
-  .exp-bullets li::before {
-    content: '→'; position: absolute; left: 0;
-    color: var(--teal); font-size: 0.8rem;
-  }
-  .exp-bullets li strong { color: var(--navy2); font-weight: 600; }
-
-  /* ── PROJECTS ── */
-  #projects { background: var(--warm); }
-  .projects-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem; margin-top: 3rem;
-  }
-  .proj-card {
-    background: var(--cream); padding: 1.8rem;
-    border: 1px solid var(--line);
-    position: relative; overflow: hidden;
-    transition: all 0.3s ease;
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  .proj-card.visible { opacity: 1; transform: translateY(0); }
-  .proj-card:hover {
-    box-shadow: 0 8px 32px rgba(13,115,119,0.12);
-    border-color: var(--teal);
-  }
-  .proj-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal2));
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  .proj-card:hover::before { transform: scaleX(1); }
-  .proj-meta {
-    font-family: 'DM Mono', monospace; font-size: 0.65rem;
-    color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 0.8rem;
-  }
-  .proj-title { font-size: 0.95rem; font-weight: 600; color: var(--navy2); margin-bottom: 0.8rem; line-height: 1.4; }
-  .proj-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
-
-  /* ── SKILLS ── */
-  #skills { background: var(--cream); }
-  .skills-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 4rem; margin-top: 3rem; }
-  .skill-group { margin-bottom: 2rem; }
-  .skill-group-title {
-    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--teal); font-weight: 600; margin-bottom: 1rem;
-    padding-bottom: 0.5rem; border-bottom: 1px solid var(--line);
-  }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .skill-tag {
-    padding: 0.35rem 0.9rem; font-size: 0.78rem; font-weight: 500;
-    border: 1px solid var(--line); color: var(--navy2);
-    background: var(--warm); transition: all 0.2s ease; cursor: default;
-  }
-  .skill-tag:hover { background: var(--navy2); color: var(--cream); border-color: var(--navy2); }
-  .skill-tag.highlight { background: var(--teal); color: white; border-color: var(--teal); }
-
-  .cert-box {
-    background: var(--navy2); padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.05);
-  }
-  .cert-box-title {
-    font-family: 'DM Mono', monospace; font-size: 0.65rem;
-    color: var(--teal2); letter-spacing: 0.15em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-  .cert-item {
-    display: flex; align-items: flex-start; gap: 1rem;
-    padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .cert-item:last-child { border-bottom: none; }
-  .cert-icon { color: var(--teal2); font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-  .cert-name { font-size: 0.85rem; color: var(--cream); font-weight: 500; }
-  .cert-sub { font-size: 0.72rem; color: rgba(245,240,232,0.45); margin-top: 0.15rem; }
-
-  /* ── CONTACT ── */
-  #contact {
-    background: linear-gradient(135deg, var(--navy2) 0%, #0a3040 100%);
-    text-align: center; padding: 6rem 4rem;
-    position: relative; overflow: hidden;
-  }
-  #contact::before {
-    content: ''; position: absolute; inset: 0; opacity: 0.04;
-    background-image: repeating-linear-gradient(
-      0deg, var(--cream) 0, var(--cream) 1px, transparent 0, transparent 40px
-    ), repeating-linear-gradient(
-      90deg, var(--cream) 0, var(--cream) 1px, transparent 0, transparent 40px
-    );
-  }
-  #contact .section-tag { justify-content: center; color: var(--teal2); }
-  #contact .section-tag::after { display: none; }
-  #contact h2.section-title { color: var(--cream); margin-bottom: 1rem; }
-  #contact h2.section-title em { color: var(--teal2); }
-  .contact-sub { font-size: 1rem; color: rgba(245,240,232,0.6); max-width: 480px; margin: 0 auto 3rem; line-height: 1.7; font-weight: 300; }
-  .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-  .contact-link {
-    display: flex; align-items: center; gap: 0.6rem;
-    padding: 0.9rem 1.8rem; font-size: 0.82rem; font-weight: 500;
-    color: var(--cream); border: 1px solid rgba(245,240,232,0.2);
-    text-decoration: none; letter-spacing: 0.05em;
-    transition: all 0.3s ease; background: rgba(255,255,255,0.04);
-  }
-  .contact-link:hover { background: var(--teal); border-color: var(--teal); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--navy); text-align: center;
-    padding: 1.5rem; font-size: 0.72rem;
-    color: rgba(245,240,232,0.3); letter-spacing: 0.05em;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; } to { opacity: 1; }
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    nav.scrolled { padding: 0.7rem 1.5rem; }
-    .nav-links { display: none; }
-    #hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 7rem 1.5rem 3rem; }
-    .hero-right { min-height: 320px; }
-    section { padding: 4rem 1.5rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .achievements-grid { grid-template-columns: repeat(2, 1fr); }
-    .projects-grid { grid-template-columns: 1fr; }
-    .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-stats { gap: 1.5rem; }
-  }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #64748b;
+}
 </style>
 </head>
+
 <body>
 
 <!-- NAV -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">Noor Hasan</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav>
+  <div><strong>Noor Hasan</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-tag">Available for senior opportunities</div>
-    <h1 class="hero-name">Noor<br/><em>Hasan</em></h1>
-    <p class="hero-title">Senior Operations & Strategy Leader with 12+ years scaling enterprise accounts, managing collections, and driving data-backed decisions across high-growth organizations.</p>
-
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">12<span>+</span></div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">₹10<span>Cr+</span></div>
-        <div class="stat-label">Monthly Portfolio</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5<span>+</span></div>
-        <div class="stat-label">C-Suite Partners</div>
-      </div>
-    </div>
-
-    <div class="hero-cta">
-      <a href="#experience" class="btn-primary"><span>View Experience</span></a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-bg-block"></div>
-    <div class="hero-pattern"></div>
-    <div class="hero-float-card">
-      <div class="float-card-title">C-Suite Collaboration</div>
-      <div class="csuite-item">
-        <div class="csuite-dot"></div>
-        <div>
-          <div class="csuite-text">COO & CFO</div>
-          <div class="csuite-co">Meddo Health</div>
-        </div>
-      </div>
-      <div class="csuite-item">
-        <div class="csuite-dot"></div>
-        <div>
-          <div class="csuite-text">CEO & CRO</div>
-          <div class="csuite-co">FuelBuddy</div>
-        </div>
-      </div>
-      <div class="csuite-item">
-        <div class="csuite-dot"></div>
-        <div>
-          <div class="csuite-text">Founder & CEO</div>
-          <div class="csuite-co">MyFuels</div>
-        </div>
-      </div>
-      <div class="csuite-item">
-        <div class="csuite-dot"></div>
-        <div>
-          <div class="csuite-text">CBO</div>
-          <div class="csuite-co">Jobizo</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="hero">
+  <h1>Hi, I'm Noor Hasan 👋</h1>
+  <p>Driving Revenue Growth | Healthcare Staffing | Enterprise Sales</p>
+  <a class="btn" href="#contact">Contact Me</a>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-tag">About Me</div>
-  <h2 class="section-title">Strategy. Operations.<br/><em>Results.</em></h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm a <strong>Senior Operations & Strategy professional</strong> based in New Delhi with over 12 years of experience across fuel-tech, health-tech, food-tech, and healthcare staffing industries. My career has been built on one principle: turning operational complexity into measurable growth.</p>
-      <p>I've managed <strong>enterprise revenue portfolios of Rs.10 Cr+</strong> monthly, scaled accounts from zero to Rs.1.5 Cr in 90 days, and led debtor reduction initiatives that moved the needle from Rs.25 Cr to Rs.10 Cr. I don't just report numbers — I build the systems that generate them.</p>
-      <p>What sets me apart is my ability to operate at both the <strong>strategic and execution level</strong> simultaneously. I've partnered directly with CEOs, COOs, CFOs, CROs, and CBOs while also rolling up my sleeves to build dashboards, reconcile discrepancies, and migrate entire operations with zero downtime.</p>
-      <p>I've supported <strong>financial due diligence and investor reporting</strong> across four organizations, bringing credibility and structure at critical business milestones.</p>
-    </div>
-    <div class="about-sidebar">
-      <div class="info-block">
-        <div class="info-label">Location</div>
-        <div class="info-value">New Delhi, India</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">Current Role</div>
-        <div class="info-value">Operations Manager, Jobizo</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">Industries</div>
-        <div class="info-value">Fuel-Tech · Health-Tech · Food-Tech · Healthcare Staffing</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">Key Clients Managed</div>
-        <div class="info-value">Amazon · Flipkart · Swiggy · Blinkit · Varun Beverages · Jindal Steel</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">Email</div>
-        <div class="info-value">noor85570@gmail.com</div>
-      </div>
-      <div class="info-block">
-        <div class="info-label">LinkedIn</div>
-        <div class="info-value">linkedin.com/in/noor-hasan7</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="section-tag">By the Numbers</div>
-  <h2 class="section-title">What I've <em>Delivered</em></h2>
-  <div class="achievements-grid">
-    <div class="ach-card">
-      <div class="ach-num">₹0<sup>→</sup>1.5Cr</div>
-      <div class="ach-desc">Monthly revenue scaled in just 3 months through B2B partnerships at MyFuels</div>
-      <div class="ach-org">MyFuels · 2024</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">₹25<sup>→</sup>10Cr</div>
-      <div class="ach-desc">Outstanding debtors reduced across Projects D15 & D10 — two consecutive strategic initiatives</div>
-      <div class="ach-org">FuelBuddy · 2023</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">₹80<sup>→</sup>120Cr</div>
-      <div class="ach-desc">Revenue growth driven through strategic account management and C-suite alignment</div>
-      <div class="ach-org">FuelBuddy · 2023–24</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">35<sup>%</sup></div>
-      <div class="ach-desc">Team productivity increase through a performance-based incentive program</div>
-      <div class="ach-org">Meddo Health · 2022</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">15K<sup>+</sup></div>
-      <div class="ach-desc">Payment discrepancy cases resolved leading a 30-member cross-functional team</div>
-      <div class="ach-org">Foodpanda · 2018–19</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">₹10<sup>Cr+</sup></div>
-      <div class="ach-desc">Monthly enterprise revenue portfolio actively managed across marquee clients</div>
-      <div class="ach-org">FuelBuddy · 2023–24</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">4</div>
-      <div class="ach-desc">Organizations where I've supported investor reporting and financial due diligence</div>
-      <div class="ach-org">Foodpanda · Meddo · MyFuels · Jobizo</div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-num">0</div>
-      <div class="ach-desc">Downtime during complete Gurgaon-to-Bangalore operational migration with 30-member team</div>
-      <div class="ach-org">Foodpanda · 2019</div>
-    </div>
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I specialize in scaling enterprise accounts and building high-value partnerships.
+      Currently at <strong>Jobizo Healthcare</strong>, I’ve successfully built revenue streams 
+      from scratch and managed large-scale clients across industries.
+    </p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-tag">Career Timeline</div>
-  <h2 class="section-title">Work <em>Experience</em></h2>
-  <div class="exp-timeline">
+  <h2>Experience</h2>
 
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Operations Manager</div>
-        <div class="exp-period">01/2026 – Present</div>
-      </div>
-      <div class="exp-company">Jobizo · Gurgaon</div>
-      <ul class="exp-bullets">
-        <li>Manage end-to-end operations for a healthcare staffing marketplace; work closely with the <strong>CBO</strong> on strategy, executive reporting, and growth objectives.</li>
-        <li>Oversee <strong>collections and receivables management</strong>, ensuring timely recovery and financial hygiene across partner accounts.</li>
-        <li>Support financial due diligence and investor reporting — preparing data packs and operational performance summaries for stakeholders.</li>
-        <li>Built centralized <strong>Power BI dashboards</strong> tracking sales, ops, and financial KPIs; optimized fulfilment rates, staffing turnaround, and partner engagement.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Lead Key Account Manager</div>
-        <div class="exp-period">07/2024 – 01/2026</div>
-      </div>
-      <div class="exp-company">MyFuels · Gurgaon</div>
-      <ul class="exp-bullets">
-        <li>Scaled enterprise accounts from <strong>Rs.0 to Rs.1.5 Cr monthly revenue within 3 months</strong>; worked directly with Founder & CEO on strategy and targets.</li>
-        <li>Managed B2B partnerships with Amazon, Flipkart, Swiggy, and Blinkit; implemented real-time data tracking for account performance and SLA compliance.</li>
-        <li>Negotiated contracts securing advantageous terms; contributed to financial due diligence and investor data reporting.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Corporate Sales & Strategy Manager</div>
-        <div class="exp-period">08/2023 – 07/2024</div>
-      </div>
-      <div class="exp-company">FuelBuddy · Gurgaon</div>
-      <ul class="exp-bullets">
-        <li>Drove revenue from <strong>Rs.80 Cr to Rs.120 Cr</strong>; collaborated with CEO & CRO to define strategy, set targets, and present executive dashboards.</li>
-        <li>Managed Rs.7–10 Cr monthly accounts for Varun Beverages, Jindal Steel, Dalmia, Amazon, and Flipkart.</li>
-        <li>Led <strong>Project D15 & D10</strong> — reduced outstanding debtors from Rs.25 Cr to Rs.10 Cr through credit control, data-driven follow-ups, and finance-accounts coordination.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Area Business Head</div>
-        <div class="exp-period">08/2019 – 07/2023</div>
-      </div>
-      <div class="exp-company">Meddo Health · Gurgaon</div>
-      <ul class="exp-bullets">
-        <li>Owned cluster <strong>P&L and revenue growth</strong>; partnered with COO & CFO on strategy, financial planning, and profitability.</li>
-        <li>Managed daily collections of Rs.5–10 Lac and monthly Rs.1–2 Cr; resolved 20–25% discrepancy gap through structured reconciliation.</li>
-        <li>Supported financial due diligence during restructuring; built in-house finance team and automated performance dashboards.</li>
-        <li>Designed performance incentive program that <strong>increased team productivity by 35%</strong>.</li>
-      </ul>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-header">
-        <div class="exp-role">Team Leader – Finance Operations</div>
-        <div class="exp-period">06/2015 – 08/2019</div>
-      </div>
-      <div class="exp-company">FoodPanda · Gurgaon</div>
-      <ul class="exp-bullets">
-        <li>Led <strong>30-member team</strong> resolving 15,000+ payment discrepancy cases; standardized reconciliation and improved vendor settlements.</li>
-        <li>Drove Gurgaon-to-Bangalore operational migration with <strong>zero downtime</strong>; automated accounts payable and supported investor reporting.</li>
-      </ul>
-    </div>
-
+  <div class="card">
+    <h3>Jobizo Healthcare</h3>
+    <p><strong>Key Achievement:</strong></p>
+    <ul>
+      <li>Scaled Amazon, Flipkart & Swiggy accounts from ₹0 to ₹1.5 Cr/month in 3 months</li>
+      <li>Built strong client partnerships and repeat business</li>
+      <li>Worked on healthcare staffing solutions at scale</li>
+    </ul>
   </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-tag">Key Projects</div>
-  <h2 class="section-title">What I've <em>Built & Led</em></h2>
-  <div class="projects-grid">
-
-    <div class="proj-card">
-      <div class="proj-meta">MyFuels · Jul – Dec 2024</div>
-      <div class="proj-title">Business Expansion & Revenue Growth</div>
-      <div class="proj-desc">Launched B2B partnerships with Amazon, Flipkart, Tata & Swiggy; scaled from Rs.0 to Rs.1.5 Cr monthly revenue in 3 months through supply chain and delivery expansion.</div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-meta">FuelBuddy · Oct – Dec 2023</div>
-      <div class="proj-title">Project D15 & D10 – Debtor Reduction Initiative</div>
-      <div class="proj-desc">Led two back-to-back initiatives reducing outstanding debtors from Rs.25 Cr to Rs.10 Cr via data-driven follow-ups, tighter credit control, and finance-accounts coordination.</div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-meta">FuelBuddy · Aug – Oct 2023</div>
-      <div class="proj-title">Process Streamlining – Indus Projects</div>
-      <div class="proj-desc">Streamlined invoicing, supply coordination, and service delivery; reduced payment delays and enhanced operational transparency, resulting in stronger client relationships.</div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-meta">Meddo Health · Nov 2022 – Mar 2023</div>
-      <div class="proj-title">Finance & Process Improvement Initiatives</div>
-      <div class="proj-desc">Built the in-house finance team; developed automated dashboards for sales and call center performance. Managed vendor settlements and receivables through organizational restructuring.</div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-meta">Foodpanda · Jun – Aug 2019</div>
-      <div class="proj-title">Process Transition – Gurgaon to Bangalore</div>
-      <div class="proj-desc">Led end-to-end operational migration including team hiring, training, and knowledge transfer. Delivered zero-downtime transition with improved process documentation.</div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-meta">Foodpanda · Sep 2018 – Jun 2019</div>
-      <div class="proj-title">Payment Discrepancy Resolution</div>
-      <div class="proj-desc">Led 30-member cross-functional team resolving 15,000+ payment discrepancy cases. Standardized reconciliation workflows and improved vendor trust through accurate settlements.</div>
-    </div>
-
+  <div class="card">
+    <h3>FuelBuddy</h3>
+    <ul>
+      <li>Handled marquee clients: Varun Beverages, Jindal Steel, Dalmia, Amazon, Flipkart</li>
+      <li>Managed ₹7–10 Cr monthly revenue accounts</li>
+      <li>Strengthened client retention & operations</li>
+    </ul>
   </div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <div class="section-tag">Capabilities</div>
-  <h2 class="section-title">Skills & <em>Expertise</em></h2>
-  <div class="skills-layout">
-    <div>
-      <div class="skill-group">
-        <div class="skill-group-title">Analytics & Reporting</div>
-        <div class="skill-tags">
-          <span class="skill-tag highlight">Power BI</span>
-          <span class="skill-tag highlight">Advanced Excel</span>
-          <span class="skill-tag highlight">SQL</span>
-          <span class="skill-tag">KPI Dashboard Development</span>
-          <span class="skill-tag">Business Intelligence</span>
-          <span class="skill-tag">Operational Reporting</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Strategy & Growth</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Business Strategy</span>
-          <span class="skill-tag">Revenue Growth</span>
-          <span class="skill-tag">B2B Sales</span>
-          <span class="skill-tag">Process Optimization</span>
-          <span class="skill-tag">Data-Driven Decision Making</span>
-          <span class="skill-tag">Supply Chain Coordination</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Finance & Collections</div>
-        <div class="skill-tags">
-          <span class="skill-tag highlight">Collections & Receivables</span>
-          <span class="skill-tag highlight">Credit Control</span>
-          <span class="skill-tag">P&L Management</span>
-          <span class="skill-tag">Vendor Management</span>
-          <span class="skill-tag">Financial Due Diligence</span>
-          <span class="skill-tag">Investor Reporting</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Leadership & Operations</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Enterprise Account Management</span>
-          <span class="skill-tag">Cross-Functional Leadership</span>
-          <span class="skill-tag">Team Building & Hiring</span>
-          <span class="skill-tag">SOP Development</span>
-          <span class="skill-tag">Stakeholder Management</span>
-        </div>
-      </div>
-    </div>
-
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Business Development</div>
+    <div class="card">Enterprise Sales</div>
+    <div class="card">Client Management</div>
+    <div class="card">Revenue Growth</div>
+    <div class="card">Operations</div>
+    <div class="card">Automation</div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-tag">Get In Touch</div>
-  <h2 class="section-title">Let's <em>Connect</em></h2>
-  <p class="contact-sub">Open to senior Operations, Strategy, and Business Development opportunities. Feel free to reach out for collaborations or conversations.</p>
-  <div class="contact-links">
-    <a href="mailto:noor85570@gmail.com" class="contact-link">
-      <span>✉</span> noor85570@gmail.com
-    </a>
-    <a href="tel:+919958455065" class="contact-link">
-      <span>✆</span> +91-9958455065
-    </a>
-    <a href="https://linkedin.com/in/noor-hasan7" target="_blank" class="contact-link">
-      <span>in</span> linkedin.com/in/noor-hasan7
-    </a>
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: your-email@example.com</p>
+    <p>LinkedIn: <a href="#">Add your link</a></p>
   </div>
 </section>
 
 <footer>
-  © 2026 Noor Hasan · New Delhi, India
+  <p>© 2026 Noor Hasan</p>
 </footer>
 
-<script>
-  // Navbar scroll effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // Scroll-triggered animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.exp-item, .proj-card').forEach(el => observer.observe(el));
-
-  // Stagger project cards
-  document.querySelectorAll('.proj-card').forEach((card, i) => {
-    card.style.transitionDelay = `${i * 0.08}s`;
-  });
-</script>
 </body>
 </html>
