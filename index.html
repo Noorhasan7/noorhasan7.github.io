@@ -86,17 +86,7 @@
     position: relative; z-index: 2;
   }
 
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.72rem;
-    color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-  .hero-tag::before {
-    content: ''; display: block;
-    width: 24px; height: 1px; background: var(--teal);
-  }
+
 
   h1.hero-name {
     font-family: 'Cormorant Garamond', serif;
@@ -114,6 +104,16 @@
     margin-top: 1rem; line-height: 1.6;
     max-width: 420px;
     opacity: 0; animation: fadeUp 0.8s ease 0.7s forwards;
+  }
+
+  .hero-strengths {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem;
+    opacity: 0; animation: fadeUp 0.8s ease 0.85s forwards;
+  }
+  .hero-strengths span {
+    padding: 0.3rem 0.85rem; font-size: 0.75rem; font-weight: 500;
+    color: var(--teal); border: 1px solid rgba(13,115,119,0.4);
+    letter-spacing: 0.03em;
   }
 
   .hero-stats {
@@ -344,23 +344,7 @@
   .skill-tag:hover { background: var(--navy2); color: var(--cream); border-color: var(--navy2); }
   .skill-tag.highlight { background: var(--teal); color: white; border-color: var(--teal); }
 
-  .cert-box {
-    background: var(--navy2); padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.05);
-  }
-  .cert-box-title {
-    font-family: 'DM Mono', monospace; font-size: 0.65rem;
-    color: var(--teal2); letter-spacing: 0.15em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-  .cert-item {
-    display: flex; align-items: flex-start; gap: 1rem;
-    padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .cert-item:last-child { border-bottom: none; }
-  .cert-icon { color: var(--teal2); font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-  .cert-name { font-size: 0.85rem; color: var(--cream); font-weight: 500; }
-  .cert-sub { font-size: 0.72rem; color: rgba(245,240,232,0.45); margin-top: 0.15rem; }
+
 
   /* ── CONTACT ── */
   #contact {
@@ -444,6 +428,13 @@
   <div class="hero-left">
     <h1 class="hero-name">Noor<br/><em>Hasan</em></h1>
     <p class="hero-title">Senior Operations & Strategy Leader with 12+ years scaling enterprise accounts, managing collections, and driving data-backed decisions across high-growth organizations.</p>
+
+    <div class="hero-strengths">
+      <span>Operations Leadership</span>
+      <span>Business Strategy</span>
+      <span>Process Optimization</span>
+      <span>Executive Stakeholder Management</span>
+    </div>
 
     <div class="hero-stats">
       <div class="stat-item">
@@ -533,11 +524,15 @@
       </div>
       <div class="info-block">
         <div class="info-label">Email</div>
-        <div class="info-value">noor85570@gmail.com</div>
+        <div class="info-value"><a href="mailto:noor85570@gmail.com" style="color:var(--teal);text-decoration:none;">noor85570@gmail.com</a></div>
       </div>
       <div class="info-block">
         <div class="info-label">LinkedIn</div>
-        <div class="info-value">linkedin.com/in/noor-hasan7</div>
+        <div class="info-value"><a href="https://linkedin.com/in/noor-hasan7" target="_blank" style="color:var(--teal);text-decoration:none;">linkedin.com/in/noor-hasan7</a></div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Portfolio</div>
+        <div class="info-value"><a href="https://noorhasan7.github.io" target="_blank" style="color:var(--teal);text-decoration:none;">noorhasan7.github.io</a></div>
       </div>
     </div>
   </div>
@@ -751,6 +746,16 @@
         </div>
       </div>
       <div class="skill-group">
+        <div class="skill-group-title">GenAI & Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag highlight">Generative AI Tools</span>
+          <span class="skill-tag highlight">Workflow Automation</span>
+          <span class="skill-tag">AI-Assisted Reporting</span>
+          <span class="skill-tag">Process Automation</span>
+          <span class="skill-tag">ChatGPT / Claude</span>
+        </div>
+      </div>
+      <div class="skill-group">
         <div class="skill-group-title">Leadership & Operations</div>
         <div class="skill-tags">
           <span class="skill-tag">Enterprise Account Management</span>
@@ -779,6 +784,9 @@
     </a>
     <a href="https://linkedin.com/in/noor-hasan7" target="_blank" class="contact-link">
       <span>in</span> linkedin.com/in/noor-hasan7
+    </a>
+    <a href="https://noorhasan7.github.io" target="_blank" class="contact-link">
+      <span>⬡</span> noorhasan7.github.io
     </a>
   </div>
 </section>
@@ -812,3 +820,4 @@
 </script>
 </body>
 </html>
+
